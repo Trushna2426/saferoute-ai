@@ -3,6 +3,7 @@ import math
 import os
 import sys
 from typing import Dict, List, Tuple, Any
+from app.saferoute_core import analyze_safe_route as run_safe_route_analysis
 
 try:
     from mcp.server.fastmcp import FastMCP
@@ -11,9 +12,6 @@ except ModuleNotFoundError as exc:
     MCP_IMPORT_ERROR = exc
 else:
     MCP_IMPORT_ERROR = None
-
-from app.saferoute_core import analyze_safe_route as run_safe_route_analysis
-
 
 
 class MissingMCPServer:
@@ -46,7 +44,6 @@ if FastMCP is not None:
             }
         )
 
-<<<<<<< HEAD
 @mcp.tool()
 def analyze_safe_route(
     start_city: str,
@@ -69,8 +66,6 @@ def analyze_safe_route(
         vehicle_type=vehicle_type,
     )
 
-=======
->>>>>>> 776d055 (Update deployment app files)
 def main() -> None:
     """Run the MCP server.
 

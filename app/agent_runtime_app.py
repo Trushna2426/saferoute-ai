@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import logging
-=======
->>>>>>> 776d055 (Update deployment app files)
 import os
 from typing import Any
 
