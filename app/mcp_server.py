@@ -46,6 +46,7 @@ if FastMCP is not None:
             }
         )
 
+<<<<<<< HEAD
 @mcp.tool()
 def analyze_safe_route(
     start_city: str,
@@ -68,6 +69,8 @@ def analyze_safe_route(
         vehicle_type=vehicle_type,
     )
 
+=======
+>>>>>>> 776d055 (Update deployment app files)
 def main() -> None:
     """Run the MCP server.
 
