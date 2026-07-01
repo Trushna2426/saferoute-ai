@@ -1,12 +1,26 @@
 # SafeRoute AI
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Google ADK](https://img.shields.io/badge/Google-ADK-green)
+![MCP](https://img.shields.io/badge/MCP-FastMCP-purple)
+![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-orange)
+
 ## Project Overview
 
 SafeRoute AI started from a simple question: what if a route planner could explain safety risk before a trip, not just distance and time?
 
-This project is my ADK + MCP based travel safety assistant for checking whether a planned route may pass through accident-prone areas. It uses a Google ADK Coordinator Agent, an MCP tool server, OpenRouteService(ORS) routing, offline fallback routing, a kaggle accident hotspot dataset, blind spot checks, a security checkpoint, and a downloadable offline HTML report.
+This project is my ADK + MCP based travel safety assistant for checking whether a planned route may pass through accident-prone areas. It uses a Google ADK Coordinator Agent, an MCP tool server, OpenRouteService (ORS) routing, offline fallback routing, a kaggle accident hotspot dataset, blind spot checks, a security checkpoint, and a downloadable offline HTML report.
 
 I built it for the Kaggle Vibecoding Agents Capstone with a focus on making the agent behavior easy to test, easy to explain, and useful in a live demo.
+
+## Quick Highlights
+
+- Google ADK Coordinator Agent
+- MCP Tool Integration
+- OpenRouteService Routing
+- Historical Accident Hotspot Analysis
+- Prompt Injection Protection
+- Offline HTML Safety Report
 
 ## Problem Statement
 
@@ -112,7 +126,7 @@ The agent is intentionally narrow. It does not try to solve every navigation pro
    - vehicle type
 3. Call the SafeRoute analysis tool through MCP.
 4. Summarize route provider, risk level, hotspot findings, blind spot risk, safety recommendations, and report path.
-5. Clearly state that the result is based on historical/demo safety data and is not a replacement for live traffic or official alerts.
+5. Clearly state that the result is based on historical safety data and is not a replacement for live traffic or official alerts.
 
 ## ADK Coordinator Agent
 
@@ -148,7 +162,7 @@ Main responsibility:
 - call SafeRoute Core,
 - return structured JSON output to the ADK agent.
 
-## OpenRouteService(ORS) Integration
+## OpenRouteService (ORS) Integration
 
 ORS integration is handled in:
 
@@ -205,7 +219,7 @@ The report includes:
 
 The report is meant for demos and judging: it is readable, self-contained, and does not need internet access after it is generated.
 
-## 📄 Example Output
+## 📄 Example API Output
 
 ```json
 {
@@ -379,7 +393,7 @@ The SafeRoute Core was tested in isolation with unit tests before integrating th
 
 Watch the complete demonstration here:
 
-[▶ SafeRoute AI Demo](https://your-demo-link)
+[▶ SafeRoute AI Demo](https://youtu.be/EA9FFzlvKgQ)
 
 What's covered in the demo
 
@@ -436,4 +450,4 @@ The next improvements would make the route analysis more realistic and the repor
 SafeRoute AI is a pre-travel safety awareness assistant. It uses available routing data, historical hotspot dataset, and heuristic risk logic to generate recommendations. It is not an emergency service, not a real-time traffic alerting system, and not a substitute for official road safety information or responsible driving judgment.
 
 ## 📄 License
-This project was developed for the Kaggle Vibe Coding Agents Capstone Project and is available for educational and demonstration purposes.
+This project was developed as part of the Kaggle Vibe Coding Agents Capstone Project. It is intended for educational and demonstration purposes.
